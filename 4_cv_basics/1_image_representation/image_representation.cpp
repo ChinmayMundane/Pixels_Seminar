@@ -8,7 +8,8 @@
 // When reading the binary file, it is necessary to allign struct members in a meomory to avoid any misinterpretation.
 // That is why, push is used  to set the packing to 1 byte, so that the BMPHeader struct is packed with no padding
 // and the pop is used to restore the default packing setting after the BMPHeader struct is defined.
-// More about data padding and alignment can be found here: https://www.geeksforgeeks.org/structure-member-alignment-padding-and-data-packing/
+// More about data padding and alignment can be found here:
+// https://www.geeksforgeeks.org/structure-member-alignment-padding-and-data-packing/
 #pragma pack(push, 1)
 
 // structure to store the file type data
@@ -70,20 +71,15 @@ int main(int argc, char *argv[])
     // read the BMP image file and store the size of BitMapFileHeader (14 bytes) in image.header
     infile.read(reinterpret_cast<char *>(&image.header), sizeof(BitMapFileHeader));
 
-    // check if the first two bytes of the BMP header indicate that this is a BMP image (the signature 'BM'). If not, print an error message which returns 1.
+    // check if the first two bytes of the BMP header indicate that this is a BMP image (the signature 'BM').
+    // If not, print an error message which returns 1.
     if (image.header.file_type[0] != 'B' || image.header.file_type[1] != 'M')
     {
         std::cerr << "Error: Input file is not a BMP image" << std::endl;
         return 1;
     }
 
-    // Output image file type data to the console
-    std::cout << "\n-------------------- Bit Map File Header --------------------" << std::endl;
-    std::cout << "File type: " << image.header.file_type << std::endl;
-    std::cout << "File Size: " << image.header.file_size << std::endl;
-    std::cout << "Pixel Data Offset: " << image.header.pixel_data_offset << std::endl;
-    std::cout << "-------------------------------------------------------------\n" << std::endl;
-
+    
     // read the BMP image file and store the size of BitMapInfoHeader (40 bytes) in image.info
     infile.read(reinterpret_cast<char *>(&image.info), sizeof(BitMapInfoHeader));
     if (image.info.bits_per_pixel != 8)
@@ -110,7 +106,17 @@ int main(int argc, char *argv[])
     std::cout << "Number of important colors: " << image.info.colors_important << std::endl;
     std::cout << "-------------------------------------------------------------\n" << std::endl;
 
-    // if valid, the code allocates memory for the image data (the pixel values) by resizing the image.data vector to hold width x height elements.
+
+    // Output image file type data to the console
+    std::cout << "\n-------------------- Bit Map File Header --------------------" << std::endl;
+    std::cout << "File type: " << image.header.file_type << std::endl;
+    std::cout << "File Size: " << image.header.file_size << std::endl;
+    std::cout << "Pixel Data Offset: " << image.header.pixel_data_offset << std::endl;
+    std::cout << "-------------------------------------------------------------\n" << std::endl;
+
+
+    // if valid, the code allocates memory for the image data (the pixel values) by
+    // resizing the image.data vector to hold width x height elements.
     image.data.resize(w * h);
 
     // read the image data from the input file into the image.data vector

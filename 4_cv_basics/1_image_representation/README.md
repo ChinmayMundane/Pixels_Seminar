@@ -3,6 +3,7 @@
 ## Table Of Contents
 - [Image Representation](#image-representation)
   - [Table Of Contents](#table-of-contents)
+<<<<<<< HEAD
   - [How Do We Represent Image?](#how-do-we-represent-image)
   - [Some Important Terminologies](#some-important-terminologies)
   - [Types of Images](#types-of-images)
@@ -36,10 +37,48 @@
 - As most of the time, representation refers to the way that brings information, such as color is coded digitally, and how the image is stored, i.e., how an image file is structured.
 
 - So,for the simplicity of computing it is represented in a matrix form.
+=======
+  - [What is Image Representation ?](#what-is-image-representation-)
+  - [Some Important Terminologies](#some-important-terminologies)
+	-  [Pixels](#pixels)
+	- [Resolution](#resolution)
+	- [Aspect Ratio](#aspect-ratio)
+  - [Types of Images](#types-of-images)
+	- [Binary Images](#binary-images)
+	- [Grayscale Images](#grayscale-images)
+	- [RGB Images](#rgb-images)
+  - [Colour Models](#colour-models)
+	- [Additive Model](#additive-model)
+	- [Subtractive Models](#subtractive-models)
+	- [HSV Colour Model](#hsv-colour-model)
+  - [Different Image Storing Formats](#different-image-storing-formats)
+	- [BitMap (.bmp)](#bitmap-bmp)
+	- [TIFF Format (.tiff , .tif)](#tiff-format-tiff--tif)
+	- [JPG Format (.jpg , .jpeg , .jpe , .jif , .jfif)](#jpg-format-jpg--jpeg--jpe--jif--jfif)
+	- [PNG Format (.png)](#png-format-png)
+  - [How is image actually stored ?](#how-is-image-actually-stored-)
+	- [Block 1: File Type Data](#block-1-file-type-data)
+	- [Block 2: Image Information Data](#block-2-image-information-data)
+	- [Block 3: Color Pallet (semi-optional)](#block-3-color-pallet-semi-optional)
+	- [Block 4: Raw Pixel Data](#block-4-raw-pixel-data)
+	- [Total BMP File Size](#total-bmp-file-size)
+  - [Installations](#installations)
+	- [Ubuntu](#ubuntu)
+	- [MacOS](#macos)
+  - [Build and run the executables](#build-and-run-the-executables)
+	- [Run without make](#run-without-make)
+
+## What is Image Representation ?
+
+- Image Representation refers to the process of encoding visual information from an image to numerical or digital format that can be stored and processed by the computer.
+
+- Basically, the images are represented in a matrix form for better understanding and processing the image.
+>>>>>>> 8276e38e424a997a272e839e88ce61e164a89c07
 
 
 ## Some Important Terminologies
 
+<<<<<<< HEAD
 1. **Pixel**: Pixel is the smallest unit of a picture displayed on the computer screen.
 
 A pixel includes its own:-
@@ -85,6 +124,69 @@ There are many type of images , and we will look in detail about different types
 ## Colour Models
 
 Color model is a 3D color coordinate system to produce all range of color through the primary color set.
+=======
+
+### Pixels:
+The smallest unit of an image is termed as a PIXEL.
+
+A pixel includes:
+- **Color Intensity (0 to 255)**
+- **Address of the pixel**
+
+
+The size of an image is defined by the  product of total number of pixels in the horizontal direction and the number of pixels in the vertical direction. For eg: 512x512, 640x480, etc.
+
+
+### Resolution: 
+The number of pixels per unit is called the resolution of the image. It refeers to the number of pixels that make up an image.
+
+**BETTER THE RESOLUTION,
+BETTER WILL BE THE IMAGE.**
+
+
+
+**Types of Resolution:**
+
+● **Image Resolution**: The distance between two pixels or the total number of pixels in an image.
+- **Resolution ∝ Quality ∝ Size**
+
+● **Screen Resolution**: The number of horizontal and vertical pixels displayed on the screen is called Screen Resolution.
+- For Example– 1920x1080 (Horizontal x Vertical)
+
+
+### Aspect Ratio: 
+It refers to the proportional relationship between the width and height of an image or video.
+	For Example: 16:9, 4:3, 1:1, etc.
+
+![image | 400](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDaOZb_8TzXwTL-OfagXZmqKbXxCWFG2mTlw&usqp=CAU)
+
+
+## Types of Images
+There are 3 basic types of images as far as its classification is concerned. Let's have a look at them one by one.
+
+
+### Binary Images
+
+Binary images are digital images that consists only 2 values for each pixel, basically 0 and 1.
+
+![image](https://learnlearn.uk/binary/wp-content/uploads/sites/11/2017/01/step-1-binary-bitmap-bw.png)
+
+### Grayscale Images
+
+Grayscale images are digital images that consists the shades of gray, ranging from black to white.
+
+![image](https://i.stack.imgur.com/B2DBy.jpg)
+
+### RGB Images
+
+RGB images are digital images that are composed of 3 primary colours: RED, GREEN, BLUE.
+
+![image](https://static.packt-cdn.com/products/9781789613964/graphics/assets/c41a3fe1-bb95-42f1-9a09-f4cbe58444e0.png)
+
+## Colour Models
+
+Color Models are a way of specifying the visible spectrum by using numeric values or color components
+>>>>>>> 8276e38e424a997a272e839e88ce61e164a89c07
 Their types are:
 
 ### Additive Model
@@ -93,11 +195,19 @@ Their types are:
 
 ● The Additive color model uses a mixture of light to display colors.
 
+<<<<<<< HEAD
 ● The perceived color depends on the transmission of light.
 
 ● It is used in digital media.For eg: Computer Monitor, Television etc.
 
 ![image](https://user-images.githubusercontent.com/109454803/226695799-882fa65b-b77f-4cc9-be5b-e9723eb26b06.png)
+=======
+● In RGB Color Model, the RED, BLUE and GREEN primary colors of light are added together in various ways to get a variety of colors.
+
+● It is used in Digital Media. For eg: Computer Monitor, Television, etc.
+
+![image](https://snobmonkey.com/wp-content/uploads/2019/10/2000px-AdditiveColor.svg-640x640.png)
+>>>>>>> 8276e38e424a997a272e839e88ce61e164a89c07
 
 ### Subtractive Models
 
@@ -105,11 +215,19 @@ Their types are:
 
 ● The Subtractive model uses a reflection of light to display the colors.
 
+<<<<<<< HEAD
 ● The perceived color depends on the reflection of light.
 
 ● The CMYK model uses printing inks. For Example: Paint, Pigments, and color filter etc.
 
 ![image](https://user-images.githubusercontent.com/109454803/226695999-806df95e-c3a6-4ad9-b0bb-623e5785ef44.png)
+=======
+● In CMYK Color Model, the Cyan, Magenta and Yellow primary colors of light are added together in various ways to get a variety of colors.
+
+● The CMYK model uses Printing Media. For Example: Printers, Pigments, and color filter etc.
+
+![image](https://snobmonkey.com/wp-content/uploads/2019/10/cmyk-illustration.jpg)
+>>>>>>> 8276e38e424a997a272e839e88ce61e164a89c07
 
 ### HSV Colour Model
 
@@ -119,6 +237,13 @@ Their types are:
 
 ● It has three components: hue, saturation, and value. This color space describes colors (hue or tint)
 
+<<<<<<< HEAD
+=======
+● Describes color in terms of their shade and brightness in cylindrical geometry.
+
+● These models are widely used in Color Pickers, editing softwares, etc.
+
+>>>>>>> 8276e38e424a997a272e839e88ce61e164a89c07
 in terms of their shade (saturation or amount of gray) and their brightness value.
 
 ![image](https://user-images.githubusercontent.com/109454803/226696173-9fb989c7-7a6e-4f64-9b9d-0ef56f608552.png)
@@ -139,7 +264,10 @@ Three Components of HSV colour model are as follows:
 
 * **VALUE (OR BRIGHTNESS)**: Value works in conjunction with saturation and describes the brightness or intensity of the color, from 0 to 100 percent, where 0 is completely black, and 100 is the brightest and reveals the most color.
    
+<<<<<<< HEAD
 * All images are stored in the computer as rectangular pixels. The resolution is an image referign to the number of pixels in a grid. Higher resolutions can be more details can be stored in an image. 
+=======
+>>>>>>> 8276e38e424a997a272e839e88ce61e164a89c07
 * Images are stored and transmitted using image file formats, which are digital file formats. Each file format has an own method for storing and compressing image data, which can affect how many pixels an image can have.
 
 ## Different Image Storing Formats
@@ -244,7 +372,13 @@ The FileSize field in `BITMAPFILEHEADER` header is the sum of all the bytes in t
 
 ![](assets/bmp_detailed_file_structure.jpg)
 
+<<<<<<< HEAD
 *Note: It is to be noted that this example uses SDL2 library just to fulfil the purpose of displaying each pixel of the image on the screen. As such there is no special need to understand the internals of SDL2 library to understand the basics of image representation.*
+=======
+**Note: It is to be noted that this example uses SDL2 library just to fulfil the purpose of displaying each pixel of the image on the screen. As such there is no special need to understand the internals of SDL2 library to understand the basics of image representation.**
+
+
+>>>>>>> 8276e38e424a997a272e839e88ce61e164a89c07
 
 ## Installations
 
@@ -280,7 +414,11 @@ cd /Pixels_Seminar/4_cv_basics/1_image_representation
 
 Perform make command 
 
+<<<<<<< HEAD
 `make`
+=======
+`make SRC=main.cpp`
+>>>>>>> 8276e38e424a997a272e839e88ce61e164a89c07
 
 To run 
 
